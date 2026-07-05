@@ -1,0 +1,80 @@
+.box{
+    width: 30vw;
+    height: 80vh;
+    border: 2px;
+    box-shadow: 0 0 7px;
+    border-radius: 15px;
+    margin: auto;
+}
+.box_img{
+    width:100%;
+    height: 60%;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid black;
+    
+    border-radius: 15px 15px 0px 0px;
+
+}
+.box_img > img {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px 15px 0px 0px ;
+}
+.title{
+    width: 90%;
+    height: 40%;
+    margin: auto;
+}
+.Discount{
+    width: 70px;
+    height: 30px;
+    position: absolute;
+    border: none;
+    border-radius: 10px;
+    background-color: red;
+    color: white;
+    left: 20px;
+    top: 10px;
+    font-size: 30px;
+}
+.name{
+    color: blue;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+.price{
+    color: black;
+}
+.price:hover{
+    color: red;
+}
+span{
+    font-size: 20px;
+    font-weight: bold;
+}
+.icon{
+    color: chocolate;
+    
+}
+.title > button{
+    width: 100%;
+    height: 35px;
+    border-radius: 15px;
+    border: none;
+    font-size: 25px;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif ;
+    color: white;
+    background-color: blue;
+}
+.title>button:hover{
+    color: black;
+    background-color: red;
+    transform: scale(1.02);
+}
+.discribtion{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+img:hover{
+    transform: scale(1.02);
+}
+

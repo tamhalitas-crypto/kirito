@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Average</title>
+</head>
+<body>
+    <script>
+        let Name , id , khmer ,english, math, total,average;
+        Name = prompt("input studentn name :");
+        id = Number(prompt("input id  :"));
+        khmer = Number(prompt("input score khmer :"));
+        math = Number(prompt("input score math :"));
+        english = Number(prompt("input score english :"));
+
+        document.write("Name :"+ Name +"<br>");
+        document.write("ID   :" + id+ "<br>");
+        document.write("kkhmer :"+ khmer + "<br>");
+        document.write("Math :"+ math + "<br>");
+        document.write("english :"+ english + "<br>");
+        total=khmer+math+english ;
+        document.write("Total =" + total+"<br>");
+        document.write("average "+total/3);
+    </script>
+</body>
+</html>

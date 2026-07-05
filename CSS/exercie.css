@@ -1,0 +1,69 @@
+.form{
+    width: 20vw;
+    height: 60vh;
+    border: 1px solid black;
+    padding: 10px;
+    margin: auto;
+    margin-top: 30px;
+}
+.box{
+    width: 95%;
+    height: 95%;
+    border: 1px solid rgb(252, 253, 253);
+    margin: auto;
+    margin-top: 5px;
+    box-shadow: 0 0 4px;
+    border-radius: 10px 10px 0 0;
+}
+.box_img{
+    width: 100%;
+    height: 70%;
+    border-bottom: 1px solid black;
+    overflow: hidden;
+}
+.box_img>img{
+    width: 100%;
+    height: 100%;
+    border-radius: 15px 15px 0 0;
+}
+.title{
+    width: 93%;
+    height: 25%;
+    margin: auto;
+    padding: 10px;
+    overflow: hidden;
+    line-height: 0;
+    position: absolute;
+}
+.name{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: bold;
+    font-size: 15px;
+    
+}
+.price_sell{
+    color: gray;
+    font-size: 13px;
+}
+.btn{
+    width: 90px;
+    height: 30px;
+    border: navy;
+    border-radius: 5px;
+    background-color: blue;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: white;
+    margin-left: 150px;
+    
+    
+}
+.btn:hover{
+    background-color: red;
+    color: black;
+}
+.icon{
+    color: orange;
+}
+img:hover{
+    transform: scale(1.02);
+}

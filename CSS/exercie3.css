@@ -1,0 +1,49 @@
+.box{
+    width: 60VW;
+    height: 40vh;
+    border: 1px solid black;
+    margin: auto;
+    margin-top: 30px;
+    padding: 20px;
+}
+.list_card{
+    display: grid;
+    width: 98%;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: 295px;   
+    background-color: rgba(128, 128, 128, 0.232);
+    margin: auto;
+}
+.card{
+    width: 90%;
+    height: 95%;
+    margin: auto;
+    background-color: white;  
+    overflow: hidden; 
+}
+.box_img{
+    width: 185px;
+    height: 185px;
+    overflow: hidden;  
+    margin: auto;
+    margin-top: 10px;
+}
+.box_img> img{
+    width: 100%;
+    height: 100%;   
+}
+.title{
+    width: 100%;
+    height: 60px;
+    padding: 10px;
+}
+.name{
+    font-weight: bold;
+    font-size: 10px;
+    text-align: center;
+}
+.major{
+    color: rgb(10, 85, 85);
+    margin-bottom: 50px;
+    
+}

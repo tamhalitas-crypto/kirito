@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+<body>
+    <form class=" card w-50 p-3 g-3 shadow rounded m-auto d-flex justify-content-between">
+        <h1 class="text-center fw-bold">Calculate</h1>
+        <div class="row ">
+            <div class="col col-lg-12  ">
+                <div class="d-flex align-items-center justify-content-between ">
+                    <div class="w-100">
+                        <label for="" class="fw-bold">num1</label><br>
+                        <input type="text" class="border-0 rounded shadow w-75" id="num1"><br><br>
+                    </div>
+                    <button type="button" class="m-auto w-25 border-0 bg-primary text-light fw-bold fs-5 rounded shadow " id="btn" onclick="calculate('+')">+</button>
+                </div>
+                <div class="d-flex align-items-center justify-content-between ">
+                    <div class="w-100">
+                        <label for="" class="fw-bold">num2</label><br>
+                        <input type="text" class="border-0 rounded shadow w-75"id="num2"><br><br>
+                    </div>
+                    <button type="button" class="m-auto w-25 border-0 bg-primary text-light fw-bold fs-5 rounded shadow" id="btn" value="-" onclick="calculate('-')">-</button>
+                </div>
+                <div class="d-flex align-items-center justify-content-between ">
+                    <div class="w-100">
+                        <label for="" class="fw-bold">num3</label><br>
+                        <input type="text" class="border-0 rounded shadow w-75" id="num3"><br><br>
+                    </div>
+                    <button type="button" class="m-auto w-25 border-0 bg-primary text-light fw-bold fs-5 rounded shadow"id="btn" value="*" onclick="calculate('*')">*</button>
+                </div>
+                <div class="d-flex align-items-center justify-content-between ">
+                    <div class="w-100">
+                        <label for="" class="fw-bold">num4</label><br>
+                        <input type="text" class="border-0 rounded shadow w-75" id="num4"><br><br>
+                    </div>
+                    <button type="button" class="m-auto w-25 border-0 bg-primary text-light fw-bold fs-5 rounded shadow"id="btn" value="/" onclick="calculate('/')">/</button>
+                </div>
+                 
+                
+            </div>
+            <h3 class="text-center">Result: <span id="result">0</span></h3>
+        </div>
+    </form>
+    <script>
+        function  calculate(operator){
+            let btn = document.getElementById("btn").value;
+            let n1 = parseFloat(document.getElementById("num1").value) || 0;
+            let n2 = parseFloat(document.getElementById("num2").value) || 0;
+            let n3 = parseFloat(document.getElementById("num3").value) || 0;
+            let n4 = parseFloat(document.getElementById("num4").value) || 0;
+
+            let total = 0; 
+            switch(operator){
+                case  "+":
+                     total= n1 + n2 + n3 + n4;
+                break;
+                case  "-":
+                     total= n1 - n2 - n3 - n4;
+                break;
+                case  "*":
+                     total= n1 * n2 * n3 * n4;
+                break;
+                case  "/":
+                     total=  n1/n2/n3/n4;
+                break;
+                
+            }
+            document.getElementById("result").innerText=total;
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+</html>

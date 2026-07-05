@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My First Website</title>
+    
+    <!-- 1. CSS: Styling the website -->
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f2f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .card {
+            background-color: white;
+            width: 320px;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .profile-img {
+            width: 100px;
+            height: 100px;
+            background-color: #007bff;
+            border-radius: 50%;
+            margin: 0 auto 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 40px;
+            font-weight: bold;
+        }
+        h2 {
+            margin: 10px 0 5px 0;
+            color: #333;
+        }
+        p {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+        .btn {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 30px;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .btn.following {
+            background-color: #28a745;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 2. HTML: Structuring the content -->
+    <div class="card">
+        <div class="profile-img">A</div>
+        <h2>Alex Coder</h2>
+        <p>Web Developer & Tech Enthusiast. Learning how to build cool things on the internet!</p>
+        
+        <!-- The button calls the JavaScript function when clicked -->
+        <button class="btn" id="followBtn" onclick="toggleFollow()">Follow</button>
+    </div>
+
+    <!-- 3. JavaScript: Making it interactive -->
+    <script>
+        function toggleFollow() {
+            let button = document.getElementById("followBtn");
+            
+            if (button.innerText === "Follow") {
+                button.innerText = "Following ✓";
+                button.classList.add("following");
+            } else {
+                button.innerText = "Follow";
+                button.classList.remove("following");
+            }
+        }
+    </script>
+
+</body>
+</html>

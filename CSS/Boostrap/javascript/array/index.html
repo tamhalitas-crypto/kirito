@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Array list</h1>
+    <ul id="array">
+
+    </ul>
+    <script>
+        let array =[22, 33, 44, 55];
+        let list = document.getElementById("array");
+        for(let i=0;i<array.length; i++){
+            let li =document.createElement("li");
+            li.innerHTML = array[i];
+            list.appendChild(li);
+
+        }
+    </script>
+</body>
+</html>

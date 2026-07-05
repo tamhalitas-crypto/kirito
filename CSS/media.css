@@ -1,0 +1,36 @@
+.nav{
+    width: 99vw;
+    background-color: aquamarine;
+    display: flex;
+    padding: 20px;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    margin: auto;
+    
+}
+.title{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+
+}
+.list_item{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    list-style-type: none;
+   margin-right: 50px;
+    
+}
+.logo{
+    width: 55px;
+    height: 55px;
+    border: 1px solid gray;
+    border-radius: 100%;
+}
+.name{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+}
+

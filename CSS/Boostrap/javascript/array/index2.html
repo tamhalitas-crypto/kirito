@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let num = [99, 88, 55, 54, 94, 23, 59];
+        let text ="";
+        for(let i=1;i<6; i+=2){
+            text +=num[i]+",";
+        }
+        document.write(text);
+        document.write("<br/>");
+
+        let text1="";
+        for(let i=0;i<7; i+=3){
+            text1 +=num[i]+",";
+        }
+        document.write(text1);
+        document.write("<br/>");
+        
+       let text2 ="";
+        for(let i=4; i>=0;i=-2 ){
+            text2 +=num[i]+",";
+        }
+        document.write(text2);
+        
+
+
+    </script>
+</body>
+</html>

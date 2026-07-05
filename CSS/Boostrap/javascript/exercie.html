@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercie</title>
+</head>
+<body>
+    <script>
+        let code;
+        let name ,qty;
+        let price, dis;
+        let total_price, payment;
+
+        code= prompt ("input code of product :");
+        name= prompt("input name :");
+        qty =parseInt(prompt("input qty :"));
+        price= parseFloat(prompt("input price :"));
+        dis=parseFloat(prompt("input disscount :"));
+        total_price=qty*price;
+        payment= total_price-(total_price*dis)/100;
+
+        document.write("I have ")
+        document.write("code of product :"+code+ "<br/>");
+        document.write("Name product  :"+name + "<br/>");
+        document.write("Quntity       :"+qty+ "<br/>");
+        document.write("Price         :$"+price+ "៛"+(price*4000).toFixed(2) +"<br/>");
+        document.write("total_price   :$"+total_price+ "៛"+(price*4000).toFixed(2) +"<br/>");
+        document.write("Payment       :$"+payment+ "៛"+(price*4000).toFixed(2) +"<br/>");
+    </script>
+</body>
+</html>

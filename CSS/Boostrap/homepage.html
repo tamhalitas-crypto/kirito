@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Data IT & CAD</title>
+    <style>
+        table {
+            width: 50%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .form-group {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>គ្រប់គ្រងទិន្នន័យសិស្ស IT & CAD</h2>
+
+    <div class="form-group">
+        <input id="studentName" type="text" placeholder="បញ្ចូលឈ្មោះសិស្ស">
+        <input type="text" id="studentage">
+        <select id="studentSkill">
+            <option value="IT">IT</option>
+            <option value="CAD">CAD</option>
+            <option value="Accounting">Accounting</option>
+        </select>
+        <button type="button" onclick="addItem()">ADD</button>
+    </div>
+    
+    <table>
+        <thead>
+            <tr>
+                <th>ល.រ (No.)</th>
+                <th>ឈ្មោះ (Name)</th>
+                <th>អាយុ</th>
+                <th>ជំនាញ (Skill)</th>
+                <th>សកម្មភាព (Action)</th>
+            </tr>
+        </thead>
+        <tbody id="resultTable">
+            <!-- ទិន្នន័យនឹងបង្ហាញនៅទីនេះ -->
+        </tbody>
+    </table>
+
+    <script>
+        // បង្កើត Array ទុកវត្ថុ (Objects) ដើម្បីរក្សាទាំងឈ្មោះ និងជំនាញ
+        let studentList = [
+            { name: "សុខ ភា", skill: "IT" ,age: "33"},
+            { name: "ចាន់ ធី", skill: "CAD",age: "11" }
+        ];
+
+        // បង្ហាញទិន្នន័យដំបូងពេលបើក Page ភ្លាម
+        renderTable();
+
+        // Function សម្រាប់បង្ហាញទិន្នន័យទៅលើតារាង HTML
+        function renderTable() {
+            let tableHtml = "";
+            for (let i = 0; i < studentList.length; i++) {
+                tableHtml += `
+                    <tr>
+                        <td>${i + 1}</td>
+                        <td>${studentList[i].name}</td>
+                        <td>${studentList[i].age}</td>
+                        <td>${studentList[i].skill}</td>
+                        
+                        <td>
+                            <button onclick="deleteItem(${i})">Delete</button>
+                        </td>
+                    </tr>
+                `;
+            }
+            document.getElementById("resultTable").innerHTML = tableHtml;
+        }
+
+        // Function សម្រាប់បន្ថែមឈ្មោះ និងជំនាញ
+        function addItem() {
+            let nameInput = document.getElementById("studentName");
+            let skillInput = document.getElementById("studentSkill");
+            let ageInput = document.getElementById("studentage");
+            
+            if (nameInput.value.trim() !== "") {
+                // ថែម Object ថ្មីចូលទៅក្នុង Array
+                studentList.push({
+                    name: nameInput.value.trim(),
+                    skill: skillInput.value
+                    // age: ageInput.value.trim(),
+                });
+                
+                renderTable(); // បង្ហាញឡើងវិញលើអេក្រង់
+                nameInput.value = ""; // សម្អាតប្រអប់ Input វិញ
+            }
+        }
+
+        // Function សម្រាប់លុបតាមជួរនីមួយៗដោយប្រើ Index (i)
+        function deleteItem(index) {
+            studentList.splice(index, 1); // លុបធាតុចេញពី Array ត្រង់ទីតាំង Index ជាក់លាក់
+            renderTable(); // បង្ហាញឡើងវិញលើអេក្រង់
+        }
+    </script>
+</body>
+</html>
